@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Ильмира Ахметзянова](https://up.htmlacademy.ru/adaptive/15/user/282427).
-* Наставник: [Евгений 😺 Алипкин](https://htmlacademy.ru/profile/ealipkin)
+* Наставник: [Евгений Алипкин](https://htmlacademy.ru/profile/ealipkin)
 
 ---
 
