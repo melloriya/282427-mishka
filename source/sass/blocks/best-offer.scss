@@ -1,0 +1,41 @@
+.best-offer {
+  margin: 0;
+  padding: 0;
+  background-color: $main-color;
+  color: $text-color;
+}
+
+.best-offer__subtitle {
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $second-color;
+}
+
+.best-offer__description {
+  line-height: 24px;
+}
+
+.best-offer__info {
+  border-collapse: collapse;
+  line-height: 20px;
+}
+
+.best-offer__info tr {
+  border-bottom: 1px solid #ececec;
+}
+
+.best-offer__image {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.best-offer__price {
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 24px;
+}
