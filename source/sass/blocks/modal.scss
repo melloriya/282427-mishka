@@ -1,7 +1,7 @@
 .modal {
   margin: 0;
   padding: 0;
-  background-color: $main-color;
+  background-color: $white-color;
 }
 
 .modal__title {
@@ -9,7 +9,7 @@
   font-weight: bold;
   line-height: 30px;
   text-transform: uppercase;
-  color: #000000;
+  color: $black-pallete;
 }
 
 .modal__size-select {

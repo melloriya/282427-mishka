@@ -16,7 +16,7 @@
 .reviews__author {
   font-size: 17px;
   font-weight: bold;
-  color: #000000;
+  color: $black-pallete;
 }
 
 .reviews__author-name {
@@ -26,6 +26,6 @@
 .reviews__author-link {
   font-size: 17px;
   font-weight: normal;
-  color: $text-color;
+  color: lighten($black-pallete, 27%);
   line-height: 30px;
 }

@@ -9,10 +9,10 @@
   font-size: 17px;
   font-weight: bold;
   line-height: 18px;
-  color: #000000;
+  color: $black-pallete;
 }
 
 .input__label--style-green {
-  color: $second-color;
+  color: $green-color;
   text-transform: uppercase;
 }

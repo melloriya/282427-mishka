@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/normalize.css">
   <title>Мишка - изделия ручной работы для дома</title>
 </head>
 <body>
@@ -21,7 +22,7 @@
             <a href="form.html">Вязание на заказ</a>
           </li>
         </ul>
-        <ul class="main_nav__list nav-list">
+        <ul class="main_nav__list user-list">
           <li class="nav-list__item nav-list__item--search">
             <a href="/search-form">Поиск по сайту</a>
           </li>
@@ -40,51 +41,64 @@
       <ul class="catalog-list">
         <li class="catalog-item">
           <img class="catalog-item__image" src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
-          <h2 class="catalog-item__name page-headings">
-            <a href="#">Зайчик-попрыгайчик</a>
-          </h2>
-          <p class="catalog-item__description">Рост 30 см, вес 200 г</p>
-          <p class="catalog-item__price">
-            <span class="catalog__cost">1 200 руб.</span>
-            <a class="catalog__add-to-cart">
-              <span class="visually-hidden">Добавить в корзину</span>
-            </a>
-          </p>
+          <div class="catalog__info">
+            <h2 class="catalog-item__name page-headings">
+              <a href="#">Зайчик-попрыгайчик</a>
+            </h2>
+            <p class="catalog-item__description">Рост 30 см, вес 200 г</p>
+            <p class="catalog-item__price">
+              <span class="catalog__cost">1 200 руб.</span>
+              <a class="catalog__add-to-cart">
+                <span class="visually-hidden">Добавить в корзину</span>
+              </a>
+            </p>
+          </div>
         </li>
         <li class="catalog-item">
           <img class="catalog__image" src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья">
-          <h2 class="catalog-item__name page-headings">
-            <a href="#">Корзинка для белья</a>
-          </h2>
-          <p class="catalog-item__description">Диаметр 15 см, высота 10 см</p>
-          <p class="catalog-item__price">
-            <span class="catalog__cost">690 руб.</span>
-            <a class="catalog__add-to-cart">
-              <span class="visually-hidden">Добавить в корзину</span>
-            </a>
-          </p>
+          <div class="catalog__info">
+            <h2 class="catalog-item__name page-headings">
+              <a href="#">Корзинка для белья</a>
+            </h2>
+            <p class="catalog-item__description">Диаметр 15 см, высота 10 см</p>
+            <p class="catalog-item__price">
+              <span class="catalog__cost">690 руб.</span>
+              <a class="catalog__add-to-cart">
+                <span class="visually-hidden">Добавить в корзину</span>
+              </a>
+            </p>
+          </div>
         </li>
         <li class="catalog-item">
           <img class="catalog__image" src="img/photo-toys-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья">
-          <h2 class="catalog-item__name page-headings">
-            <a href="#">Большая корзинка для игрушек</a>
-          </h2>
-          <p class="catalog-item__description">Диаметр 30 см, высота 30 см</p>
-          <p class="catalog-item__price">
-            <span class="catalog__cost">1 500 руб.</span>
-            <a class="catalog__add-to-cart">
-              <span class="visually-hidden">Добавить в корзину</span>
-            </a>
-          </p>
+          <div class="catalog__info">
+            <h2 class="catalog-item__name page-headings">
+              <a href="#">Большая корзинка для игрушек</a>
+            </h2>
+            <p class="catalog-item__description">Диаметр 30 см, высота 30 см</p>
+            <p class="catalog-item__price">
+              <span class="catalog__cost">1 500 руб.</span>
+              <a class="catalog__add-to-cart">
+                <span class="visually-hidden">Добавить в корзину</span>
+              </a>
+            </p>
+          </div>
         </li>
       </ul>
     </section>
     <section class="production">
       <h2 class="production__title page-headings">Процесс производства</h2>
-      <video src="#" width="260" height="150" poster="img/video-mobile@1x.jpg"></video>
+      <div class="production__video">
+        <video src="#" width="260" height="150" poster="img/video-mobile@1x.jpg"></video>
+        <button class="production__video button-play">
+          <span class="visually-hidden">Воспроизвести видео</span>
+        </button>
+      </div>
+      <div class="production__info">
         <p class="production__text ">По просьбам наших любимых фолловеров мы сняли для вас
         подробное видео о том, как появляются наши товары.</p>
         <button class="production__button button">Сделать заказ</button>
+      </div>
     </section>
   </main>
   <footer class="page-footer">

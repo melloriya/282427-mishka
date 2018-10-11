@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  color: #000000;
+  color: $black-pallete;
 }
 
 .nav-list__item a {
@@ -10,6 +10,6 @@
   font-size: 17px;
   font-weight: bold;
   line-height: 24px;
-  color: #000000;
+  color: $black-pallete;
   text-decoration: none;
 }

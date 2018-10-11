@@ -12,12 +12,12 @@
 .catalog-item__description {
   font-size: 13px;
   line-height: 30px;
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid lighten($black-pallete, 93%);
 }
 
 .catalog-item__price {
   font-size: 15px;
   line-height: 24px;
   font-weight: bold;
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid lighten($black-pallete, 93%);
 }

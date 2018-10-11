@@ -3,33 +3,38 @@
   font-size: 17px;
   font-weight: bold;
   text-transform: uppercase;
-  color: $text-color;
-  background-color: $main-color;
-  border: 2px solid #444444;
+  color: lighten($black-pallete, 27%);
+  background-color: $white-color;
+  border: 2px solid lighten($black-pallete, 27%);
 }
 
-.button:hover, .button:active {
-  color: #ffffff;
-  background-color: #444444;
+.button:hover,
+.button:focus {
+  color: $white-color;
+  background-color: lighten($black-pallete, 27%);
   transition: 0.2s ease-out;
 }
 
 .button:active {
-  color: rgba(225,225,225,0.3);
-  background-color: #444444;
+  color: rgba(225, 225, 225, 0.3);
+  background-color: lighten($black-pallete, 27%);
 }
 
 .button--green {
-  color: #ffffff;
-  background-color: $second-color;
+  color: $white-color;
+  background-color: $green-color;
   border: none;
 }
 
-.button--green:hover, .button--green:focus {
-  background-color: $hover-color;
+.button--green:hover,
+.button--green:focus {
+  color: transparentize($white-color, 0.3);
+  background-color: desaturate($green-color, 5%);
+  transition: 0.2s ease-out;
+  cursor: pointer;
 }
 
 .button--green:active {
-  color: rgba(225,225,225,0.3);
-  background-color: $hover-color;
+  color: transparentize($white-color, 0.3);
+  background-color: desaturate($green-color, 5%);
 }
