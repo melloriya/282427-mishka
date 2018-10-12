@@ -1,0 +1,27 @@
+.form {
+  margin: 0;
+  padding: 0;
+  background: $white-color;
+}
+
+.form__wrapper {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 17px;
+  color: $black-pallete;
+}
+
+.form__title {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  color: $green-color;
+}
+
+.form__name {
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  font-size: 13px;
+  line-height: 24px;
+  font-family: $main-font;
+  font-weight: normal;
+  color: lighten($black-pallete, 27%);
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page-header {
+  margin: 0;
+  padding: 0;
+  font-family: $main-font;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: bold;
+  background-color: $white-color;
+}
+
+.page-header__logo {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.page-header__logo-image {
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 86px;
+  height: 35px;
+}
+
+.page-title {
+  margin: 0;
+  padding: 0;
+  font-family: $main-font;
+  font-size: 27px;
+  font-weight: bold;
+  line-height: 30px;
+  color: #010000;
+}
+
+.page-subtitle {
+  margin: 0;
+  padding: 0;
+  font-family: $main-font;
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 30px;
+  color: #000000;
+}
+
+.page-headings {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+  color: #000000;
+}
+
+.page-main {
+  margin: 0;
+  padding: 0;
+}
+
+.page-text {
+  font-family: lighten($black-pallete, 27%);
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 30px;
+  color: lighten($black-pallete, 95%);
+}
+
+.page-footer {
+  background-color: lighten($black-pallete, 95%);
+}

@@ -1,0 +1,61 @@
+.products {
+  margin: 0;
+  padding: 0;
+  background-color: $white-color;
+  background-image: url("../img/hero-mobile@1x.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  /* временно */
+  min-height: 283px;
+}
+
+.products__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: $white-color;
+}
+
+.products__item {
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 24px;
+  color: $white-color;
+}
+
+.products__item a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.products__item--interior {
+  background-color: $green-color;
+}
+
+.products__item--interior:hover,
+.products__item--interior:focus {
+  background-color: saturate($green-color, 5%);
+  transition: 0.2s ease-out;
+}
+
+.products__item--interior:active {
+  color: transparentize($white-color, 0.3);
+  background-color: saturate($green-color, 5%);
+}
+
+.products__item--toys {
+  background-color: $darker-green;
+}
+
+.products__item--toys:hover,
+.products__item--toys:focus {
+  background-color: adjust-color($darker-green, $saturation: 64);
+  transition: 0.2s ease-out;
+}
+
+.products__item--toys:active {
+  color: transparentize($white-color, 0.3);
+  background-color: #46c1ae;
+}
