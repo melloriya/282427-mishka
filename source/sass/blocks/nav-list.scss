@@ -3,10 +3,30 @@
   padding: 0;
   list-style: none;
   color: $black-pallete;
+  /*временно для сетки*/
+  background-color: rgba(211, 150, 50, 0.5);
+}
+
+.nav-list__item {
+  height: 79px;
+  position: relative;
+}
+
+.nav-list__item::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  border-bottom: 1px solid adjust-color($black-pallete, $lightness: 93);
 }
 
 .nav-list__item a {
   display: block;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 77px;
   font-size: 17px;
   font-weight: bold;
   line-height: 24px;

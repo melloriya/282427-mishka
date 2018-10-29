@@ -7,3 +7,17 @@
   font-weight: bold;
   background-color: $white-color;
 }
+
+.main-nav__toggle {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  border: none;
+  width: 21px;
+  height: 20px;
+  background-color: $white-color;
+  background-image: url("../img/icon-menu-close.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 21px 20px;
+}
