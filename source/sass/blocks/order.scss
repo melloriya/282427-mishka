@@ -1,0 +1,41 @@
+.order {
+  margin: 0 auto;
+  width: 320px;
+}
+
+@media (min-width: $tablet-width) {
+  .order {
+    width: auto;
+  }
+}
+
+.order__text {
+  margin: 28px auto 26px;
+  width: 260px;
+}
+
+@media (min-width: $tablet-width) {
+  .order__text {
+    width: 670px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+.order__form {
+  margin: 0 auto;
+  width: 260px;
+}
+
+@media (min-width: $tablet-width) {
+  .order__form {
+    width: 670px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+.order__button {
+  width: 100%;
+  margin-bottom: 55px;
+}

@@ -1,7 +1,24 @@
+.map {
+  width: auto;
+  height: 457px;
+}
+
 .map img {
   display: block;
   margin: 0;
   padding: 0;
   width: 322px;
-  height: 457px;
+  height: 460px;
+}
+
+@media (min-width: $tablet-width) {
+  .map img {
+    width: 768px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .map img {
+    width: 527px;
+  }
 }

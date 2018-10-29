@@ -1,11 +1,20 @@
 .input {
-  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
   padding: 0;
+  margin: 0;
+  margin-bottom: 22px;
+}
+
+.input:last-child {
+  margin-bottom: 0;
 }
 
 .input__label {
   margin: 0;
+  margin-bottom: 18px;
   padding: 0;
+  flex-basis: 45%;
   font-size: 17px;
   font-weight: bold;
   line-height: 18px;
@@ -15,4 +24,42 @@
 .input__label--style-green {
   color: $green-color;
   text-transform: uppercase;
+}
+
+.input__value {
+  padding: 0;
+  padding-bottom: 15px;
+  border: none;
+  border-bottom: 2px solid $black-pallete;
+  font-size: 17px;
+  flex-grow: 1;
+  color: adjust-color($black-pallete, $lightness: 27%);
+}
+
+::-webkit-input-placeholder {
+  color: adjust-color($black-pallete, $lightness: 85%);
+}
+
+::-moz-placeholder {
+  color: adjust-color($black-pallete, $lightness: 85%);
+}
+
+:-moz-placeholder {
+  color: adjust-color($black-pallete, $lightness: 85%);
+}
+
+:-ms-input-placeholder {
+  color: adjust-color($black-pallete, $lightness: 85%);
+}
+
+.input__value--textarea {
+  padding: 15px;
+  margin-bottom: 16px;
+  border: 2px solid adjust-color($black-pallete, $lightness: 29%);
+}
+
+.input__small-text {
+  font-size: 14px;
+  line-height: 16px;
+  color: adjust-color($black-pallete, $lightness: 26%);
 }

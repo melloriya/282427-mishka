@@ -1,7 +1,58 @@
 .user-list {
   margin: 0;
   padding: 0;
-  list-style: none;
-  /*временно для сетки*/
-  background-color: rgba(211, 80, 50, 0.5);
+}
+
+@media (min-width: $tablet-width) {
+  .user-list {
+    display: flex;
+    justify-content: space-between;
+    order: 2;
+    flex-basis: 55%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .user-list {
+    order: 3;
+    flex-basis: 35%;
+  }
+}
+
+.user-list__item {
+  display: flex;
+  padding-left: 20%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid adjust-color($black-pallete, $lightness: 93%);
+}
+
+@media (min-width: $tablet-width) {
+  .user-list__item {
+    padding: 0;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    border-bottom: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .user-list__item {
+    border-bottom: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .user-list__item--search {
+    font-size: 0;
+    border-right: 1px solid adjust-color($black-pallete, $lightness: 93%);
+    border-left: 1px solid adjust-color($black-pallete, $lightness: 93%);
+    flex-basis: 24%;
+  }
+}
+
+.user-list__item a {
+  font: inherit;
+  color: $black-pallete;
+  text-decoration: none;
 }

@@ -1,7 +1,39 @@
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid lighten($black-pallete, 90%);
+}
+
+
+@media (min-width: $tablet-width) {
+  .copyright {
+    border-top: none;
+  }
+}
+
+.copyright__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+@media (min-width: $tablet-width) {
+  .copyright__wrapper {
+    width: 100%;
+  }
+}
+
 .copyright__text {
-  font-family: $main-font;
   font-size: 19px;
   font-weight: bold;
   line-height: 19px;
   color: $black-pallete;
+}
+
+.copyright__link {
+  width: 27px;
+  height: 34px;
+  background-color: red;
 }
