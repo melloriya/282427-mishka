@@ -1,0 +1,28 @@
+.slider__switchers {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid adjust-color($black-pallete, $lightness: 93%);
+  border-bottom: 1px solid adjust-color($black-pallete, $lightness: 93%);
+}
+
+.slider__switcher {
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  height: 43px;
+  border: none;
+  /*временно*/
+  background-color: red;
+}
+
+@media (min-width: $tablet-width) {
+  .slider__switchers {
+    width: 170px;
+    border: none;
+  }
+}

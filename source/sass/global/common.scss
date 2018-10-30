@@ -1,14 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-  min-width: 320px;
-  font-size: 13px;
-  line-height: 24px;
-  font-family: $main-font;
-  font-weight: normal;
-  color: lighten($black-pallete, 27%);
-}
-
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -27,28 +16,46 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
-.page-header {
+body {
+  position: relative;
   margin: 0;
   padding: 0;
-  font-family: $main-font;
-  font-size: 15px;
+  min-width: 320px;
+  font-size: 13px;
   line-height: 24px;
-  font-weight: bold;
-  background-color: $white-color;
+  font-family: $main-font;
+  font-weight: normal;
+  color: adjust-color($black-pallete, $lightness: 27);
 }
 
-.page-header__logo {
-  margin: 0;
-  padding: 0;
-  display: block;
+.page-header {
+  margin: 0 auto;
+  width: 320px;
 }
 
-.page-header__logo-image {
+@media (min-width: $tablet-width) {
+  .page-header {
+    margin: 0 auto;
+    width: 768px;
+    height: 89px;
+    border-bottom: 1px solid #ececec;
+    background-color: $white-color;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    margin: 0 auto;
+    width: 1150px;
+  }
+}
+
+.page-link {
   margin: 0;
   padding: 0;
-  display: block;
-  width: 86px;
-  height: 35px;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid $green-color;
 }
 
 .page-title {
@@ -61,36 +68,189 @@ input[type="radio"].visually-hidden {
   color: #010000;
 }
 
+@media (min-width: $tablet-width) {
+  .page-title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+
 .page-subtitle {
   margin: 0;
   padding: 0;
-  font-family: $main-font;
+
   font-size: 25px;
   font-weight: bold;
   line-height: 30px;
   color: #000000;
 }
 
+@media (min-width: $tablet-width) {
+  .page-subtitle {
+    font-size: 43px;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-subtitle {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+
 .page-headings {
-  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  font-family: $main-font;
+  font-size: 17px;
   font-weight: bold;
-  line-height: 30px;
+  line-height: 24px;
   color: #000000;
 }
 
+@media (min-width: $tablet-width) {
+  .page-headings {
+    font-size: 20px;
+  }
+}
+
 .page-main {
-  margin: 0;
+  margin: 0 auto;
+  width: 320px;
   padding: 0;
 }
 
+@media (min-width: $tablet-width) {
+  .page-main {
+    margin: 0 auto;
+    width: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main {
+    width: auto;
+  }
+}
+
 .page-text {
-  font-family: lighten($black-pallete, 27%);
+  margin: 0;
+  padding: 0;
+  font-family: $main-font;
   font-size: 15px;
   font-weight: normal;
   line-height: 30px;
-  color: lighten($black-pallete, 95%);
+  /*color: lighten($black-pallete, 95%);*/
+}
+
+@media (min-width: $tablet-width) {
+  .page-text {
+    font-size: 17px;
+  }
 }
 
 .page-footer {
+  width: 320px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
   background-color: lighten($black-pallete, 95%);
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    width: auto;
+  }
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  width: 260px;
+  align-items: stretch;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 670px;
+    padding-top: 30px;
+    padding-bottom: 35px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer__wrapper {
+    width: 1050px;
+  }
+}
+
+.page-footer__logo {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer__logo {
+    display: block;
+    flex-basis: 27%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer__logo {
+    display: block;
+    flex-basis: 20%;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer__social {
+    flex-basis: 27%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer__social {
+    flex-basis: 20%;
+  }
+}
+
+.page-footer__copyright {
+  padding-top: 20px;
+  margin-bottom: 21px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer__copyright {
+    flex-basis: 27%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer__copyright {
+    flex-basis: 20%;
+  }
+}
+
+.title-container {
+  padding: 74px 0;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .title-container {
+    padding: 100px 0 85px;
+  }
 }

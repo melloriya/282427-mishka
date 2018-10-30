@@ -6,22 +6,87 @@
 
 .form__wrapper {
   margin: 0;
+  margin-bottom: 30px;
   padding: 0;
   border: none;
   font-size: 17px;
   font-weight: bold;
-  line-height: 17px;
+  line-height: 18px;
   color: $black-pallete;
+}
+
+@media (min-width: $tablet-width) {
+  display: flex;
 }
 
 .form__title {
   margin: 0;
-  padding: 0;
+  margin-bottom: 20px;
+  font-family: $main-font;
   text-transform: uppercase;
   color: $green-color;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: $tablet-width) {
+  .form__title {
+    flex-basis: 40%;
+    flex-shrink: 0;
+  }
+}
+
+.form__title::after {
+  /* Не работает псевдоэлемент с legend ? */
+  content: "";
+  flex-grow: 1;
+  flex-shrink: 0;
+  margin-left: 15px;
+  width: 60px;
+  height: 1px;
+  background: $green-color;
+}
+
+@media (min-width: $tablet-width) {
+  .form__title::after {
+    display: none;
+  }
+}
+
+.form__item {
+  position: relative;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form__item:last-child {
+  margin-bottom: 0;
+}
+
+.form__control {
+  margin: 0;
+  padding: 0;
 }
 
 .form__name {
   margin: 0;
   padding: 0;
+  flex-basis: 75%;
+}
+
+.form__item input[type="radio"] + .form-control {
+  width: 36px;
+  height: 36px;
+  background-color: adjust-color($black-pallete, $lightness: 75%);
+}
+
+.form__item input[type="checkbox"] + .form-control--checkbox {
+  width: 36px;
+  height: 36px;
+  background-color: adjust-color($black-pallete, $lightness: 50%);
 }
