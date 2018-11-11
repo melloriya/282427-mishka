@@ -5,7 +5,7 @@
 .slider__info {
   line-height: 30px;
   font-size: 17px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .slider__author {
@@ -22,26 +22,24 @@
 .slider__switchers {
   display: flex;
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 36px;
   padding: 0;
   width: auto;
-  height: 52px;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid adjust-color($black-pallete, $lightness: 93%);
-  border-bottom: 1px solid adjust-color($black-pallete, $lightness: 93%);
 }
 
 .slider__switcher {
   margin: 0;
   padding: 0;
+  border: 1px solid #ececec;
   width: 50%;
-  height: 43px;
-  border: none;
+  height: 54px;
   background-image: url("../img/icon-left-arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: $white-color;
+  cursor: pointer;
 
   &:last-child {
     background-image: url("../img/icon-right-arrow.svg");
@@ -77,14 +75,17 @@
 
   .slider__switchers {
     width: 175px;
-    border: none;
     margin-bottom: 0;
+  }
+
+  .slider__switcher {
+    border: none;
   }
 }
 
 @media (min-width: $desktop-width) {
   .slider__item {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
     padding-right: 100px;
   }
 }

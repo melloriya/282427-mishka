@@ -9,12 +9,14 @@
     content: "";
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 7px;
+    left: 50%;
+    width: 320px;
+    height: 6px;
     background-image: url("../img/bg-zigzag-line.svg");
-    background-size: auto 7px;
+    background-size: contain;
     background-repeat: repeat-x;
+    background-position: center;
+    transform: translateX(-50%);
   }
 }
 
@@ -91,7 +93,7 @@
 
     &::after {
       height: 18px;
-      background-size: auto 18px;
+      width: 768px;
     }
   }
 
@@ -146,7 +148,7 @@
 @media (min-width: $desktop-width) {
   .best-offer {
     padding-bottom: 100px;
-    padding-left: 170px;
+    padding-left: 175px;
     box-sizing: border-box;
 
     &::after {
@@ -164,7 +166,7 @@
 
   .best-offer__title {
     position: relative;
-    padding-top: 76px;
+    padding-top: 73px;
     margin-bottom: 50px;
     z-index: 1;
   }

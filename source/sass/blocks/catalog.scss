@@ -6,6 +6,11 @@
 .catalog-item__add-to-cart {
   border: none;
   background: none;
+  padding: 0;
+}
+
+.catalog-item__icon {
+  fill: #d3d2d2;
 }
 
 @media (min-width: $tablet-width) {
@@ -28,7 +33,7 @@
 
 @media (min-width: $tablet-width) {
   .catalog-list {
-    margin-top: 75px;
+    margin-top: 73px;
   }
 }
 
@@ -60,7 +65,7 @@
   .catalog-item {
     display: flex;
     border: 1px solid adjust-color($black-pallete, $lightness: 93%);
-    margin-bottom: 50px;
+    margin-bottom: 52px;
   }
 }
 
@@ -122,7 +127,9 @@
 @media (min-width: $tablet-width) {
   .catalog-item__info {
     flex-basis: 50%;
-    padding: 25px 30px;
+    padding-top: 25px;
+    padding-right: 30px;
+    padding-left: 30px;
     padding-bottom: 25px;
     display: flex;
     flex-direction: column;

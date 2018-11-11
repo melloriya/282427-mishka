@@ -1,15 +1,19 @@
 .button {
   margin: 0;
   padding: 14px 15px;
+  display: block;
   font-family: $main-font;
   font-size: 17px;
+  line-height: 20px;
   font-weight: bold;
   text-transform: uppercase;
   color: lighten($black-pallete, 27%);
   background-color: $white-color;
   border: 2px solid lighten($black-pallete, 27%);
-  min-width: 170px;
+  min-width: 175px;
   text-decoration: none;
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
 .button:hover,
