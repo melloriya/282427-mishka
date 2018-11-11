@@ -177,7 +177,7 @@
           <div class="production__info">
             <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас
             подробное видео о том, как появляются наши товары.</p>
-            <button class="production__button button">Сделать заказ</button>
+            <button class="production__button button button--modal">Сделать заказ</button>
           </div>
         </div>
       </section>
@@ -231,30 +231,33 @@
     </div>
   </footer>
   <section class="modal">
-    <div class="modal__wrapper">
-      <h2 class="modal__title">Добавить в корзину</h2>
-      <p class="modal__text page-text">Выберите размер:</p>
-      <form class="modal__size-select" method="post" action="https://echo.htmlacademy.ru">
-        <ul class="modal__buttons select-list">
-          <li class="select__item">
-            <label class="select__value">S
-              <input class="select__radio visually-hidden" type="radio" id="s-size" name="goods-size" value="s-size">
-            </label>
-          </li>
-          <li class="select__item">
-            <label class="select__value">M
-              <input class="select__radio visually-hidden" type="radio" id="m-size" name="goods-size" value="m-size">
-            </label>
-          </li>
-          <li class="select__item">
-            <label class="select__value">L
-              <input class="select__radio visually-hidden" type="radio" id="l-size" name="goods-size" value="l-size">
-            </label>
-          </li>
-        </ul>
-        <button class="button button--green" type="submit">Добавить</button>
-      </form>
+    <div class="modal__overlay">
+      <div class="modal__wrapper">
+        <h2 class="modal__title">Добавить в корзину</h2>
+        <p class="modal__text page-text">Выберите размер:</p>
+        <form class="modal__size-select" method="post" action="https://echo.htmlacademy.ru">
+          <ul class="modal__buttons select-list">
+            <li class="select__item">
+              <label class="select__value">S
+                <input class="select__radio visually-hidden" type="radio" id="s-size" name="goods-size" value="s-size">
+              </label>
+            </li>
+            <li class="select__item">
+              <label class="select__value">M
+                <input class="select__radio visually-hidden" type="radio" id="m-size" name="goods-size" value="m-size">
+              </label>
+            </li>
+            <li class="select__item">
+              <label class="select__value">L
+                <input class="select__radio visually-hidden" type="radio" id="l-size" name="goods-size" value="l-size">
+              </label>
+            </li>
+          </ul>
+          <button class="button button--green" type="submit">Добавить</button>
+        </form>
+      </div>
     </div>
   </section>
+  <script src="js/modal.js"></script>
 </body>
 </html>
