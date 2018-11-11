@@ -1,58 +1,85 @@
-.user-list {
-  margin: 0;
-  padding: 0;
-}
+.user-list__icon {
+  margin-right: 25px;
 
-@media (min-width: $tablet-width) {
-  .user-list {
-    display: flex;
-    justify-content: space-between;
-    order: 2;
-    flex-basis: 55%;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .user-list {
-    order: 3;
-    flex-basis: 35%;
-  }
+  /*& path {
+    fill: rgba(34, 31, 31, 0.3);
+  }*/
+  fill: rgba(34, 31, 31, 0.3);
 }
 
 .user-list__item {
-  display: flex;
-  padding-left: 20%;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  border-bottom: 1px solid adjust-color($black-pallete, $lightness: 93%);
-}
-
-@media (min-width: $tablet-width) {
-  .user-list__item {
-    padding: 0;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    border-bottom: none;
+  &:hover .user-list__icon,
+  &:focus .user-list__icon {
+    fill: $green-color;
+    transition: 0.2s ease-out;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .user-list__item {
-    border-bottom: none;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .user-list__item--search {
-    font-size: 0;
-    border-right: 1px solid adjust-color($black-pallete, $lightness: 93%);
-    border-left: 1px solid adjust-color($black-pallete, $lightness: 93%);
-    flex-basis: 24%;
+  &:active .user-list__icon {
+    fill: transparentize($green-color, 0.3);
   }
 }
 
 .user-list__item a {
-  font: inherit;
-  color: $black-pallete;
-  text-decoration: none;
+  padding-left: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.user-list__item--delivery {
+  font-size: 15px;
+  font-weight: normal;
+  color: adjust-color($black-pallete, $lightness: 27%);
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .user-list {
+    flex-basis: 52%;
+    justify-content: flex-end;
+  }
+
+  .user-list__item a {
+    padding-right: 0;
+  }
+
+  .user-list__item--search a {
+    border-right: 1px solid adjust-color($black-pallete, $lightness: 93%);
+    border-left: 1px solid adjust-color($black-pallete, $lightness: 93%);
+    padding: 36px 32px 34px 32px;
+    box-sizing: border-box;
+
+    & .user-list__icon {
+      margin-right: 0;
+    }
+  }
+
+  .user-list__item--search span {
+    display: none;
+  }
+
+  .user-list__item--cart {
+    & a {
+      padding-top: 32px;
+      padding-bottom: 33px;
+      padding-left: 35px;
+      font-size: 17px;
+    }
+  }
+
+  .user-list__item--delivery {
+    display: flex;
+    z-index: 1;
+  }
+
+  .user-list__item--delivery a {
+    font-size: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .user-list {
+    flex-basis: 33%;
+  }
 }

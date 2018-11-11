@@ -1,6 +1,6 @@
 .button {
   margin: 0;
-  padding: 12px 15px;
+  padding: 14px 15px;
   font-family: $main-font;
   font-size: 17px;
   font-weight: bold;
@@ -9,6 +9,7 @@
   background-color: $white-color;
   border: 2px solid lighten($black-pallete, 27%);
   min-width: 170px;
+  text-decoration: none;
 }
 
 .button:hover,

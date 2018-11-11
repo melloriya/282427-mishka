@@ -1,29 +1,20 @@
 .best-offer {
-  margin: 0 auto;
-  margin-bottom: 30px;
-  width: 260px;
+  position: relative;
+  padding-bottom: 40px;
   font-family: $main-font;
   background-color: $white-color;
   color: lighten($black-pallete, 27%);
-}
 
-@media (min-width: $tablet-width) {
-  .best-offer {
-    display: flex;
-    flex-wrap: wrap;
-    width: 670px;
-    margin-bottom: 50px;
-    align-items: baseline;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .best-offer {
-    position: relative;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    margin-bottom: 70px;
-    width: 1051px;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 7px;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-size: auto 7px;
+    background-repeat: repeat-x;
   }
 }
 
@@ -31,54 +22,16 @@
   width: auto;
 }
 
-@media (min-width: $tablet-width) {
-  .best-offer__wrapper {
-    position: relative;
-    width: 670px;
-    display: flex;
-    flex-wrap: wrap;
-    padding-right: 57%;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .best-offer__wrapper {
-    padding-right: 57%;
-    width: 885px;
-    box-sizing: border-box;
-    justify-content: center;
-    align-content: flex-end;
-    /*временно для сетки*/
-    min-height: 638px;
-  }
-}
-
 .best-offer__title {
   margin: 0;
   padding: 0;
 }
 
-@media (min-width: $tablet-width) {
-  .best-offer__title {
-    flex-grow: 1;
-    margin-bottom: 50px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .best-offer__title {
-    position: absolute;
-    top: 58px;
-    left: 20%;
-    z-index: 100;
-  }
-}
-
 .best-offer__subtitle {
   display: block;
   margin: 0;
+  margin-top: 10px;
   margin-bottom: 15px;
-  padding: 0;
   font-size: 17px;
   font-weight: bold;
   line-height: 20px;
@@ -86,19 +39,9 @@
   color: $green-color;
 }
 
-@media (min-width: $desktop-width) {
-  .best-offer__subtitle {
-    margin-top: 65px;
-    padding: 0 2%;
-    width: 15%;
-    box-sizing: border-box;
-    align-self: flex-start;
-    text-align: center;
-  }
-}
-
 .best-offer__description {
-  margin-bottom: 29px;
+  margin-bottom: 15px;
+  line-height: 27px;
 }
 
 .best-offer__info {
@@ -106,12 +49,6 @@
   border-collapse: collapse;
   line-height: 20px;
   width: 100%;
-}
-
-@media (min-width: $tablet-width) {
-  .best-offer__info {
-    font-size: 15px;
-  }
 }
 
 .best-offer__info tr {
@@ -122,33 +59,20 @@
   padding: 10px 0;
 }
 
+.best-offer__value {
+  width: 38%;
+}
+
 .best-offer__image {
   display: block;
   margin: 0;
   padding: 0;
 }
 
-@media (min-width: $tablet-width) {
-  .best-offer__image {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 334px;
-    height: 404px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .best-offer__image {
-    width: 525px;
-    height: 639px;
-  }
-}
-
 .best-offer__price {
   display: block;
   width: auto;
-  margin: 30px 0;
+  margin: 25px 0;
   text-align: center;
   font-size: 17px;
   font-weight: bold;
@@ -159,4 +83,110 @@
   display: block;
   width: 100%;
   text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .best-offer {
+    padding-bottom: 70px;
+
+    &::after {
+      height: 18px;
+      background-size: auto 18px;
+    }
+  }
+
+  .best-offer__wrapper {
+    position: relative;
+    padding-right: 375px;
+  }
+
+  .best-offer__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+  }
+
+  .best-offer__subtitle {
+    flex-basis: 10%;
+    text-align: center;
+    margin-bottom: 0;
+    margin-right: 26px;
+  }
+
+  .best-offer__description {
+    margin-bottom: 33px;
+    line-height: 30px;
+  }
+
+  .best-offer__info {
+    font-size: 15px;
+    margin-bottom: 55px;
+  }
+
+  .best-offer__value {
+    width: 33%;
+  }
+
+  .best-offer__image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 334px;
+    height: 404px;
+  }
+
+  .best-offer__price {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 35px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .best-offer {
+    padding-bottom: 100px;
+    padding-left: 170px;
+    box-sizing: border-box;
+
+    &::after {
+      width: 100%;
+      height: 23px;
+      background-size: auto 23px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .best-offer__wrapper {
+    padding-right: 580px;
+    margin: 0;
+  }
+
+  .best-offer__title {
+    position: relative;
+    padding-top: 76px;
+    margin-bottom: 50px;
+    z-index: 1;
+  }
+
+  .best-offer__subtitle {
+    position: absolute;
+    margin: 0;
+    width: 120px;
+    bottom: 5px;
+    left: -150px;
+  }
+
+  .best-offer__description {
+    margin-bottom: 46px;
+  }
+
+  .best-offer__info {
+    margin-bottom: 105px;
+  }
+
+  .best-offer__image {
+    width: 525px;
+    height: 639px;
+  }
 }

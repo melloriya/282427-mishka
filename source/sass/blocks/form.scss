@@ -2,91 +2,214 @@
   margin: 0;
   padding: 0;
   background: $white-color;
-}
-
-.form__wrapper {
-  margin: 0;
-  margin-bottom: 30px;
-  padding: 0;
-  border: none;
   font-size: 17px;
-  font-weight: bold;
   line-height: 18px;
+  font-weight: bold;
   color: $black-pallete;
 }
 
-@media (min-width: $tablet-width) {
-  display: flex;
+.form__section {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
 .form__title {
+  display: flex;
   margin: 0;
-  margin-bottom: 20px;
+  margin-top: 23px;
+  margin-bottom: 26px;
   font-family: $main-font;
   text-transform: uppercase;
   color: $green-color;
-  display: flex;
   align-items: center;
-}
+  justify-content: space-between;
 
-@media (min-width: $tablet-width) {
-  .form__title {
-    flex-basis: 40%;
-    flex-shrink: 0;
+  &::after {
+    content: "";
+    width: 60px;
+    margin-left: 15px;
+    flex-grow: 1;
+    height: 1px;
+    background-color: $green-color;
   }
 }
 
-.form__title::after {
-  /* Не работает псевдоэлемент с legend ? */
-  content: "";
-  flex-grow: 1;
-  flex-shrink: 0;
-  margin-left: 15px;
-  width: 60px;
-  height: 1px;
-  background: $green-color;
-}
-
-@media (min-width: $tablet-width) {
-  .form__title::after {
-    display: none;
-  }
+.form__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .form__item {
-  position: relative;
   margin: 0;
-  margin-bottom: 20px;
-  padding: 0;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  margin-bottom: 29px;
+  padding-left: 60px;
+  padding-top: 8px;
+  padding-bottom: 7px;
+  box-sizing: border-box;
 }
 
 .form__item:last-child {
   margin-bottom: 0;
 }
 
-.form__control {
-  margin: 0;
-  padding: 0;
+.form__section--type .form__item {
+  margin-bottom: 10px;
+}
+
+.form__section--name .form__title {
+  margin-top: 30px;
+}
+
+.form__input:hover,
+.form__input:focus {
+  color: #663d15;
+}
+
+.form__input:disabled + label {
+  color: #000000;
+  opacity: 0.5;
 }
 
 .form__name {
   margin: 0;
   padding: 0;
-  flex-basis: 75%;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
 }
 
-.form__item input[type="radio"] + .form-control {
-  width: 36px;
-  height: 36px;
-  background-color: adjust-color($black-pallete, $lightness: 75%);
+.form__input--checkbox + .form__name::before,
+.form__input--radio + .form__name::before {
+  content: "";
+  position: absolute;
+  left: -59px;
+  top: -10px;
+  width: 38px;
+  height: 38px;
+  box-sizing: border-box;
+  border: 2px solid #444444;
 }
 
-.form__item input[type="checkbox"] + .form-control--checkbox {
-  width: 36px;
-  height: 36px;
-  background-color: adjust-color($black-pallete, $lightness: 50%);
+.form__input--radio + .form__name::before {
+  border-radius: 50%;
+}
+
+.form__input--checkbox:checked + .form__name::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 16px;
+  left: -52px;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.form__input--radio:checked + .form__name::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 2px;
+  left: -47px;
+  background-color: $green-color;
+  border-radius: 50%;
+}
+
+@media (min-width: $tablet-width) {
+  .form__section--type .form__item {
+    margin-bottom: 25px;
+  }
+
+  .form__section {
+    padding-top: 50px;
+    padding-bottom: 25px;
+  }
+
+  .form__list {
+    padding-left: 168px;
+  }
+
+  .form__section:nth-of-type(even) {
+    background-color: #f1f1f1;
+  }
+
+  .form__list--color {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form__list--color .form__item {
+    flex-basis: 48%;
+  }
+
+  .form__list--color .form__item:last-child {
+    margin-bottom: 25px;
+  }
+
+  .form__title {
+    position: absolute;
+    top: 40px;
+    left: 50px;
+  }
+
+  .form__title::after {
+    display: none;
+  }
+
+  .form__input--checkbox + .form__name::before,
+  .form__input--radio + .form__name::before {
+    left: -83px;
+    top: -15px;
+    width: 54px;
+    height: 52px;
+  }
+
+  .form__input--radio:checked + .form__name::after {
+    top: 0;
+    left: -67px;
+    width: 21px;
+    height: 21px;
+  }
+
+  .form__input--checkbox:checked + .form__name::after {
+    left: -72px;
+    width: 33px;
+    height: 22px;
+  }
+
+  .form__item {
+    margin-bottom: 25px;
+    padding-left: 80px;
+    padding-top: 15px;
+    padding-bottom: 18px;
+    font-size: 19px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__list {
+    padding-left: 175px;
+    max-width: 700px;
+  }
+
+  .form__list--color {
+    max-width: 755px;
+  }
+
+  .form__list--color .form__item {
+    flex-basis: 30%;
+  }
+
+  .form__title {
+    top: -8px;
+    left: 110px;
+  }
 }

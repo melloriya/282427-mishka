@@ -1,20 +1,15 @@
 .input {
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 22px;
-}
-
-.input:last-child {
-  margin-bottom: 0;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .input__label {
   margin: 0;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   padding: 0;
-  flex-basis: 45%;
   font-size: 17px;
   font-weight: bold;
   line-height: 18px;
@@ -22,18 +17,32 @@
 }
 
 .input__label--style-green {
+  margin-top: 7px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
   color: $green-color;
   text-transform: uppercase;
+
+  &::after {
+    content: "";
+    width: 60px;
+    margin-left: 25px;
+    flex-grow: 1;
+    height: 1px;
+    background-color: $green-color;
+  }
 }
 
 .input__value {
   padding: 0;
-  padding-bottom: 15px;
+  padding-bottom: 12px;
   border: none;
   border-bottom: 2px solid $black-pallete;
   font-size: 17px;
   flex-grow: 1;
   color: adjust-color($black-pallete, $lightness: 27%);
+  box-sizing: border-box;
 }
 
 ::-webkit-input-placeholder {
@@ -59,7 +68,114 @@
 }
 
 .input__small-text {
+  margin-bottom: 30px;
   font-size: 14px;
   line-height: 16px;
+  font-weight: normal;
   color: adjust-color($black-pallete, $lightness: 26%);
+}
+
+.input__icon {
+  position: absolute;
+  top: 40px;
+  right: 5px;
+  width: 25px;
+  height: 24px;
+  fill: #cccccc;
+}
+
+.input__icon--mail {
+  width: 32px;
+  height: 32px;
+}
+
+@media (min-width: $tablet-width) {
+  .input {
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  .input__label {
+    margin: 0;
+    padding: 0;
+    font-size: 19px;
+    line-height: 19px;
+  }
+
+  .input__value {
+    margin: 0;
+    padding: 0;
+    padding-top: 11px;
+    padding-bottom: 13px;
+    padding-left: 15px;
+    margin-left: 30px;
+    font-size: 19px;
+    line-height: 19px;
+    background-color: transparent;
+  }
+
+  .input__label--style-green {
+    position: absolute;
+    left: -167px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .input__label--style-notes {
+    top: 70px;
+    left: 0;
+  }
+
+  .input__value--phone,
+  .input__value--mail {
+    margin-left: 0;
+  }
+
+  .input__value--textarea {
+    flex-basis: 70%;
+    margin-left: 170px;
+    margin-bottom: 52px;
+  }
+
+  .input__icon {
+    top: 11px;
+    right: 23px;
+  }
+
+  .input__small-text {
+    font-size: 17px;
+    flex-basis: 45%;
+    order: 3;
+  }
+
+  .input__button {
+    flex-basis: 35%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .input__value--textarea {
+    margin-left: 0;
+    flex-basis: 100%;
+  }
+
+  .input__label--style-green {
+    left: -114px;
+    top: 14px;
+  }
+
+  .input__label--style-notes {
+    top: 75px;
+    left: 60px;
+  }
+
+  .input__button {
+    flex-basis: 33%;
+  }
 }
